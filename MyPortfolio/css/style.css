@@ -1,0 +1,161 @@
+
+* {
+  margin: 0px ;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+/* Navbar */
+.nav {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #1f1f1f;
+ 
+}
+#name {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.logo {
+  font-weight: 900;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding:0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+    justify-content: right !important;
+
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-icon span {
+  width: 22px;
+  height: 2px;
+  background: white;
+}
+
+/* Hero Layout */
+.hero {
+  display: flex;
+  padding: 0%;
+  height: 100%;
+  align-items: left;
+  display: flex;
+}
+
+/* Left Image */
+.hero-image {
+  width: 50%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+/* Right Content */
+.hero-content {
+  width: 55%;
+  background: #1f1f1f;
+  color: white;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.title-line {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero-content h1 {
+  font-size: 72px;
+  line-height: 1.1;
+}
+
+.line {
+  height: 2px;
+  width: 150px;
+  background: #999;
+}
+
+/* Paragraph */
+.hero-content p {
+  margin: 30px 0;
+  font-size: 14px;
+  color: #ccc;
+  max-width: 500px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.primary {
+  background: white;
+  color: black;
+  font-weight: 600;
+}
+
+.secondary {
+  background: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.play-icon {
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 6px 10px;
+  font-size: 10px;
+}
+
+/* Page Number */
+.page-number {
+  position: absolute;
+  bottom: 40px;
+  right: 60px;
+  font-size: 12px;
+  color: white;
+}

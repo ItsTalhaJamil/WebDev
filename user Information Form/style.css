@@ -1,0 +1,48 @@
+* {
+  margin: 0px ;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+}
+h2{
+    text-align: center;   
+}
+#userForm {
+  width: 400px;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  margin: auto;
+}
+div {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;  
+
+
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.btn {
+    padding: 12px 30px;
+    background-color: #00bcd4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    width: 400px;
+
+}
+.btn:hover {
+    background-color: #0097a7;
+}
