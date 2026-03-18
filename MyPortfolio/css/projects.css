@@ -1,0 +1,9 @@
+
+/* Projects */
+.project-card {
+    background: #1e293b;
+    margin: 10px auto;
+    padding: 20px;
+    width: 60%;
+    border-radius: 10px;
+}

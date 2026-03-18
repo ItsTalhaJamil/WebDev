@@ -1,0 +1,18 @@
+/* Sections */
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background: #1e293b;
+    padding: 10px 20px;
+    border-radius: 5px;
+}

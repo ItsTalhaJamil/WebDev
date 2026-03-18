@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
     <title>User Form</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="MyPortfolio/css/style.css">
 </head>
 <body>
 
     <h2 style="text-align: center"><u>User <b>Information</b> Form</u></h2>
 
     <form id="userForm">
-     <div class="container">
-      <div >
+     <div class="container">      <div class="left Div" >
         <label>Name:</label>
         <input type="text" id="name" required>
         <br><br>
@@ -23,7 +22,8 @@
         <input type="text" id="contactNo" required>
         <br><br>
       </div>  
-      <div >
+
+      <div  class="right Div">
           <label>Qualification:</label>
         <input type="text" id="qualification">
         <br><br>
@@ -43,8 +43,9 @@
        
         <button type="submit" class="btn">Submit</button>
     </form>
+    <div class="output">
 
-    <h3>Entered Data:</h3>
+    <h3 style="text-align: center;">Entered Data:</h3>
 
     <p id="outputName"></p>
     <p id="outputEmail"></p>
@@ -52,6 +53,7 @@
     <p id="outputFatherName"></p>
     <p id="outputContactNo"></p>
     <p id="outputQualification"></p>
+</div>
 
     <script src="form.js"></script>
 

@@ -16,22 +16,36 @@ h2{
   padding: 10px;
   border-radius: 10px;
   margin: auto;
-}
-div {
+  margin-top: 50px;}
+/* div {
   
   display: flex;
-  flex-direction: column;
+  flex-direction;
   justify-content: center;
   align-items: center;
-  gap: 10px;  
+  gap: 10px;
 
 
-}
+} */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+.left Div{
+    display: flex;
+    flex-direction: start;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;  
+}
+.right Div{
+    display: flex;
+    flex-direction: end;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;  
 }
 .btn {
     padding: 12px 30px;
