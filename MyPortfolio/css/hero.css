@@ -1,3 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #1f1f1f;
+    color: #fff;
+}
 /* Hero Layout */
 .hero {
   display: flex;
@@ -10,6 +21,7 @@
 /* Left Image */
 .hero-image {
   width: 50%;
+  
 }
 
 .hero-image img {
@@ -29,6 +41,22 @@
   justify-content: center;
   align-items: flex-start;
   position: relative;
+}
+.hero-content h2 {
+  font-size: 28px;
+line-height: 0.2;
+}
+.hero-content p {
+  color:#ffffff; 
+  margin-bottom:13px;
+  text-align: start;
+ 
+}
+.hero-content p em {
+  color:#f8f3f3;
+  
+  text-align: start;
+ 
 }
 
 .title-line {
