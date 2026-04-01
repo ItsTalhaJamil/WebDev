@@ -1,0 +1,338 @@
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f5f0e8;
+  --card: #fffdf9;
+  --text: #1a1a1a;
+  --muted: #888;
+  --border: #e0dbd0;
+  --accent: #2c2c2c;
+  --accent-light: #f0ece4;
+  --high: #e24b4a;
+  --mid: #ef9f27;
+  --low: #1d9e75;
+  --radius: 14px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 1rem 5rem;
+  color: var(--text);
+}
+
+/* ── Wrapper ── */
+.wrapper {
+  width: 100%;
+  max-width: 560px;
+  background: var(--card);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2rem 2rem;
+  border: 1px solid var(--border);
+  animation: fadeUp 0.4s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Header ── */
+header {
+  margin-bottom: 2rem;
+}
+
+.date-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+header h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.tagline {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* ── Input Area ── */
+.input-area {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.25rem;
+}
+
+#task-input {
+  flex: 1;
+  height: 42px;
+  padding: 0 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  background: var(--accent-light);
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  color: var(--text);
+  outline: none;
+  transition: border 0.2s;
+}
+
+#task-input::placeholder {
+  color: #bbb;
+}
+
+#task-input:focus {
+  border-color: var(--accent);
+  background: #fff;
+}
+
+#priority-sel {
+  height: 42px;
+  padding: 0 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  outline: none;
+}
+
+#add-btn {
+  height: 42px;
+  padding: 0 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+#add-btn:hover { opacity: 0.85; }
+#add-btn:active { transform: scale(0.97); }
+
+/* ── Filters ── */
+.filters {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 1.25rem;
+}
+
+.filter-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* ── Task List ── */
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 60px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: box-shadow 0.15s, border-color 0.15s;
+  animation: slideIn 0.2s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.task-item:hover {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  border-color: #ccc;
+}
+
+.task-item.done {
+  opacity: 0.45;
+}
+
+/* Priority dot */
+.p-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.p-dot.high { background: var(--high); }
+.p-dot.mid  { background: var(--mid); }
+.p-dot.low  { background: var(--low); }
+
+/* Checkbox */
+.check-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.check-btn.checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.check-btn.checked::after {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 9px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translateY(-1px);
+}
+
+/* Task text */
+.task-text {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.task-item.done .task-text {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.task-text[contenteditable="true"] {
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 1px;
+}
+
+/* Delete button */
+.del-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #bbb;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.15s, background 0.12s, color 0.12s;
+}
+
+.task-item:hover .del-btn { opacity: 1; }
+
+.del-btn:hover {
+  background: #ffeaea;
+  color: var(--high);
+}
+
+/* ── Footer ── */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+#clear-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+#clear-btn:hover {
+  background: #ffeaea;
+  color: var(--high);
+  border-color: #f5c1c1;
+}
+
+/* ── Empty state ── */
+.empty {
+  text-align: center;
+  padding: 3rem 0;
+  font-size: 13px;
+  color: #bbb;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .wrapper { padding: 1.75rem 1.25rem 1.5rem; }
+  header h1 { font-size: 28px; }
+  .input-area { flex-wrap: wrap; }
+  #task-input { min-width: 0; }
+}
