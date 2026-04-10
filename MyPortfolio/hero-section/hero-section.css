@@ -1,0 +1,139 @@
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background: #1f1f1f;
+  position: relative;
+}
+
+/* Image Section */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+} 
+
+.hero-image img {
+  width: 100%;
+  max-width: 700px;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+/* Content Section */
+.hero-content {
+  flex: 1;
+  position: relative;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 25px;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons button {
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+/* Primary Button */
+.btn-primary {
+  background: black;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #333;
+}
+
+/* Secondary Button */
+.btn-outline {
+  background: transparent;
+  color: black;
+  border: 2px solid black;
+}
+
+.btn-outline:hover {
+  background: black;
+  color: white;
+}
+
+/* Page Indicator */
+.page-indicator {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .hero-content {
+    order: 2;
+  }
+
+  .hero-image {
+    order: 1;
+  }
+
+  .page-indicator {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-image img {
+    max-width: 280px;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+  }
+}
